@@ -13,7 +13,7 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/predict_temp_api', methods=['POST'])
+@app.route('/predict_api', methods=['POST'])
 def predict_api():
     data = request.json['data']
     print(data)
@@ -22,7 +22,7 @@ def predict_api():
     return jsonify(output)
 
 
-@app.route('/predict_temp', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     data = [float(x) for x in request.form.values()]
     final_features = [np.array(data)]
