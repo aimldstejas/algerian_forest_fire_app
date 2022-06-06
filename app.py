@@ -31,7 +31,7 @@ def predict():
     output = model.predict(final_features)[0]
     print(output)
     # output = round(prediction[0], 2)
-    return render_template('home.html', prediction_text="Airfoil pressure is  {}".format(output))
+    return render_template('home.html', prediction_text="Temperature is  {}".format(output))
 
 
 if __name__ == "__main__":
